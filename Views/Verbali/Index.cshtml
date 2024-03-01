@@ -1,0 +1,41 @@
+@model List<Municipale.Models.Verbale>
+
+@{
+    ViewData["Title"] = "Elenco verbali";
+}
+
+<div class="container">
+    <h1>Elenco verbali</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Data Violazione</th>
+                <th>Indirizzo Violazione</th>
+                <th>Agente</th>
+                <th>Data trascrizione</th>
+                <th>Importo</th>
+                <th>Decurtamento punti</th>
+                <th>Trasgressore</th>
+                <th>Violazione</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var verbale in Model)
+            {
+                <tr>
+                    <td>@verbale.ID</td>
+                    <td>@verbale.DataViolazione</td>
+                    <td>@verbale.IndirizzoViolazione</td>
+                    <td>@verbale.IDAgente</td>
+                    <td>@verbale.DataTrascrizioneVerbale</td>
+                    <td>@verbale.Importo</td>
+                    <td>@verbale.DecurtamentoPunti</td>
+                    <td>@verbale.IDAnagrafe</td>
+                    <td>@verbale.IDTipoViolazione</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

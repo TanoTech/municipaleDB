@@ -1,0 +1,11 @@
+@model TipoViolazione
+
+<h1>Aggiungi violazione</h1>
+
+<form asp-controller="TipoViolazione" asp-action="Add" method="post">
+            <div class="form-group">
+                <label asp-for="Descrizione" class="control-label">Descrione</label>
+                <input asp-for="Descrizione" class="form-control" />
+            </div>
+            <button type="submit" class="btn btn-primary">Aggiungi</button>
+</form>

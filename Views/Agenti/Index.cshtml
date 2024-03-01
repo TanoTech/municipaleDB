@@ -1,0 +1,29 @@
+@{
+    ViewData["Title"] = "Elenco Agenti";
+}
+
+<div class="container">
+    <h1>Elenco Agenti</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Cognome</th>
+                <th>Grado</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var agente in Model)
+            {
+                <tr>
+                    <td>@agente.ID</td>
+                    <td>@agente.Nome</td>
+                    <td>@agente.Cognome</td>
+                    <td>@agente.Grado</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

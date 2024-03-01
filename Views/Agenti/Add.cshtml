@@ -1,0 +1,19 @@
+@model Agente
+
+<h1>Aggiungi agente</h1>
+
+<form asp-controller="Agenti" asp-action="Add" method="post">
+            <div class="form-group">
+                <label asp-for="Nome" class="control-label">Nome</label>
+                <input asp-for="Nome" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Cognome" class="control-label">Cognome</label>
+                <input asp-for="Cognome" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Grado" class="control-label">Grado</label>
+                <input asp-for="Grado" class="form-control" />
+            </div>
+            <button type="submit" class="btn btn-primary">Aggiungi</button>
+</form>
