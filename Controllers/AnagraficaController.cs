@@ -7,7 +7,7 @@ namespace Municipale.Controllers
     public class AnagraficaController : Controller
     {
         private readonly MunicipaleContext _context;
-
+        
         public AnagraficaController(MunicipaleContext context)
         {
             _context = context;

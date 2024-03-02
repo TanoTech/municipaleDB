@@ -1,0 +1,16 @@
+@model TipoViolazione
+
+@{
+    ViewData["Title"] = "Conferma Eliminazione";
+}
+
+<div class="container">
+    <h4>Conferma eliminazione di  @Model.Descrizione</h4>
+    <span class="bg-danger text-white">Questa azione non è reversibile</span>
+
+    <form asp-controller="TipoViolazione" asp-action="DeleteConfermata" method="post">
+        <input type="hidden" name="id" value="@Model.ID" />
+        <button type="submit" class="btn btn-danger">Elimina</button>
+    </form>
+
+</div>

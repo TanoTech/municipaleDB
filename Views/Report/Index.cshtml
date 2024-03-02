@@ -1,0 +1,75 @@
+@model List<List<Report>>
+
+<div class="d-flex">
+    <div class="m-2">
+        <h2>Report Totali</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Trasgressore</th>
+                    <th>Totale Verbali</th>
+                    <th>Totale Punti Decurtati</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var report in Model[0])
+                {
+                    <tr>
+                        <td>@report.Trasgressore</td>
+                        <td>@report.TotaleVerbali</td>
+                        <td>@report.TotalePuntiDecurtati</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="m-2">
+        <h2>Violazioni > 400 Euro</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Trasgressore</th>
+                    <th>Indirizzo Violazione</th>
+                    <th>Importo</th>
+        
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var report in Model[1])
+                {
+                    <tr>
+                        <td>@report.Trasgressore</td>
+                        <td>@report.IndirizzoViolazione</td>
+                        <td>@report.Importo€</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="m-2">
+        <h2>Punti > 10</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Trasgressore</th>
+                    <th>Indirizzo Violazione</th>
+                    <th>Importo</th>
+                    <th>Totale Punti Decurtati</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var report in Model[2])
+                {
+                    <tr>
+                        <td>@report.Trasgressore</td>
+                        <td>@report.IndirizzoViolazione</td>
+                        <td>@report.Importo€</td>
+                        <td>@report.TotalePuntiDecurtati</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

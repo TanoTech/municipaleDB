@@ -10,6 +10,7 @@
             <tr>
                 <th>ID</th>
                 <th>Descrizione</th>
+                <th>Azioni</th>
             </tr>
         </thead>
         <tbody>
@@ -18,6 +19,7 @@
                 <tr>
                     <td>@violazione.ID</td>
                     <td>@violazione.Descrizione</td>
+                    <td><a class="btn btn-danger" asp-controller="TipoViolazione" asp-action="Delete" asp-route-id="@violazione.ID">Elimina</a></td>
                 </tr>
             }
         </tbody>

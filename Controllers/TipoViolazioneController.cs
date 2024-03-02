@@ -34,5 +34,40 @@ namespace Municipale.Controllers
             }
             return RedirectToAction("Index");
         }
+
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var violazione = await _context.TipoViolazione.FindAsync(id);
+            if (violazione == null)
+            {
+                return NotFound();
+            }
+
+            return View(violazione);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> DeleteConfermata(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var violazione = await _context.TipoViolazione.FindAsync(id);
+            if (violazione == null)
+            {
+                return NotFound();
+            }
+
+            _context.TipoViolazione.Remove(violazione);
+            await _context.SaveChangesAsync();
+            return RedirectToAction("Index");
+        }
     }
 }

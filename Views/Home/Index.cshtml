@@ -7,27 +7,27 @@
         <form asp-action="Index" method="post">
             <div class="form-group">
                 <label asp-for="Anagrafica.Cognome" class="control-label">Cognome</label>
-                <input asp-for="Anagrafica.Cognome" class="form-control" />
+                <input asp-for="Anagrafica.Cognome" class="form-control" minlenght="2" required/>
             </div>
             <div class="form-group">
                 <label asp-for="Anagrafica.Nome" class="control-label">Nome</label>
-                <input asp-for="Anagrafica.Nome" class="form-control" />
+                <input asp-for="Anagrafica.Nome" class="form-control" minlenght="2" required/>
             </div>
             <div class="form-group">
                 <label asp-for="Anagrafica.Indirizzo" class="control-label">Indirizzo residenza</label>
-                <input asp-for="Anagrafica.Indirizzo" class="form-control" />
+                <input asp-for="Anagrafica.Indirizzo" class="form-control" minlenght="3" required />
             </div>
             <div class="form-group">
                 <label asp-for="Anagrafica.Città" class="control-label">Città residenza</label>
-                <input asp-for="Anagrafica.Città" class="form-control" />
+                <input asp-for="Anagrafica.Città" class="form-control" minlenght="2" required />
             </div>
             <div class="form-group">
                 <label asp-for="Anagrafica.CAP" class="control-label">CAP residenza</label>
-                <input asp-for="Anagrafica.CAP" class="form-control" />
+                <input asp-for="Anagrafica.CAP" class="form-control" minlenght="5"  maxlenght="5" required/>
             </div>
             <div class="form-group">
                 <label asp-for="Anagrafica.CF" class="control-label">Codice fiscale </label>
-                <input asp-for="Anagrafica.CF" class="form-control" />
+                <input asp-for="Anagrafica.CF" class="form-control"  minlenght="16" maxlenght="16" required/>
             </div>
 
             <button type="submit" class="btn btn-primary">Aggiungi trasgressore</button>
@@ -69,22 +69,22 @@
 
             <div class="form-group">
                 <label asp-for="Verbale.IndirizzoViolazione" class="control-label">Indirizzo violazione</label>
-                <input asp-for="Verbale.IndirizzoViolazione" class="form-control" />
+                <input asp-for="Verbale.IndirizzoViolazione" class="form-control" minlenght="3" required/>
             </div>
 
             <div class="form-group">
                 <label asp-for="Verbale.Importo" class="control-label">Importo</label>
-                <input type="number" asp-for="Verbale.Importo" class="form-control" />
+                <input type="number" asp-for="Verbale.Importo" class="form-control" minlenght="1" required />
             </div>
 
             <div class="form-group">
                 <label asp-for="Verbale.DecurtamentoPunti" class="control-label">Punti decurtati</label>
-                <input type="number" asp-for="Verbale.DecurtamentoPunti" class="form-control" />
+                <input type="number" asp-for="Verbale.DecurtamentoPunti" class="form-control" maxlenght="20" />
             </div>
 
             <div class="form-group">
                 <label asp-for="Verbale.DataTrascrizioneVerbale" class="control-label">Data verbale</label>
-                <input id="data" asp-for="Verbale.DataTrascrizioneVerbale" class="form-control" />
+                <input id="data" asp-for="Verbale.DataTrascrizioneVerbale" class="form-control" required />
             </div>
 
             <button type="submit" class="btn btn-primary">Aggiungi Verbale</button>

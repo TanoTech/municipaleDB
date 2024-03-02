@@ -17,5 +17,6 @@ namespace Municipale.Models
         public int DecurtamentoPunti { get; set; }
         public int IDAnagrafe { get; set; }
         public int IDTipoViolazione { get; set; }
+        
     }
 }

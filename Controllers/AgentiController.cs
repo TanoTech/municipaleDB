@@ -25,7 +25,7 @@ namespace Municipale.Controllers
         }
 
         [HttpPost]
-        public  IActionResult Add(Agente agente)
+        public IActionResult Add(Agente agente)
         {
             if (ModelState.IsValid)
             {
